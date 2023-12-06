@@ -244,15 +244,11 @@ def genetic_algorithm(distance_matrix):
     size = comm.Get_size()
     is_root = rank == 0
 
-    if is_root:
-        n = len(distance_matrix)  # number of cities
-        P_SIZE = 3  # size of the population
-        MAX_ITERS = 10
-        data = (n, P_SIZE, MAX_ITERS, distance_matrix)
-        for i in range(1, size):
-            comm.send(data, dest=i, tag=i)
-    else:
-        n, P_SIZE, MAX_ITERS, distance_matrix = comm.recv(source=0, tag=rank)
+    
+    n = len(distance_matrix)  # number of cities
+    P_SIZE = 5  # size of the population
+    MAX_ITERS = 50
+        
 
     population = []
     fitness = []
