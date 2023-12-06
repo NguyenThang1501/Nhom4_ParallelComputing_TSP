@@ -238,17 +238,6 @@ def shuffle_array(arr):
     normalize_order(arr)
 
 
-
-
-matrix = [[0, 9, 24, 13, 4, 9, 3],
-          [9, 0, 17, 6, 1, 2, 3],
-          [24, 17, 0, 11, 8, 9, 7],
-          [13, 6, 11, 0, 5, 9, 3],
-          [4, 1, 8, 5, 0, 9, 3],
-          [9, 2, 9, 9, 9, 0, 3],
-          [3, 3, 3, 3, 3, 3, 0]]
-
-
 def genetic_algorithm(distance_matrix):
     comm = MPI.COMM_WORLD
     rank = comm.Get_rank()
@@ -326,18 +315,6 @@ def recieve_matrix():
     result['best_ever'] = [int(x) for x in result['best_ever']]
     result['optimal_dist'] = float(result['optimal_dist'])
     return jsonify(result)
-
-# //result = genetic_algorithm(data)
-# best_ever = result[0]
-# optimal_dist = result[1]
-
-# @app.route("/")
-# def data():
-#     data = {
-#         "best_ever": best_ever.tolist(),
-#         "optimal_dist":optimal_dist
-#     }
-#     return jsonify(data)
 
 if __name__ == '__main__':
     app.run(debug=True)
