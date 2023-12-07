@@ -299,7 +299,7 @@ app = Flask(__name__)
 app.json_encoder = CustomJSONEncoder
 
 CORS(app, origins='http://localhost:3000')
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # Ví dụ: Tăng giới hạn thành 16MB
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 
 
 
 @app.route("/matrix", methods = ['POST', 'GET'])
