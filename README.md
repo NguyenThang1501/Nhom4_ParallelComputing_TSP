@@ -18,10 +18,10 @@ Clone source code từ github
               
 Install các thư viện cần thiết
       
-Di chuyển vào thư mục tsp, cài đặt npm
+Di chuyển vào thư mục frontend, cài đặt npm
 
 
-      cd tsp
+      cd frontend
 
       npm install
 
