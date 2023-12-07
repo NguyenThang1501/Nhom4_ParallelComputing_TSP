@@ -282,5 +282,5 @@ if is_root:
     plt.ylabel("Tour length")
     plt.title("Parallel Convergence")
     plt.tight_layout()
-    plt.savefig("convergence500_para.png")
+    plt.savefig("convergence50_para.png")
     plt.clf()

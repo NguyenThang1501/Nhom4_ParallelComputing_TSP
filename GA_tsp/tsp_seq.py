@@ -214,7 +214,7 @@ def natural_calamity(population, best, intensity):
 distance_matrix = np.loadtxt(open("testCase50.csv", "rb"), delimiter=",").reshape(50, 50)
 
 n = len(distance_matrix)  # number of cities
-P_SIZE = 20  # size of the population
+P_SIZE = 10  # size of the population
 MAX_ITERS = 200
 population = []
 fitness = []
@@ -226,8 +226,6 @@ plt.figure(figsize=(8, 5.5))
 best_ever = None
 optimal_distance = math.inf
 iters = 0
-plt.style.use('seaborn-v0_8-whitegrid')
-plt.figure(figsize=(8, 5.5))
 
 start_time = time.time()
 
@@ -261,7 +259,7 @@ plt.xlabel("Iterations")
 plt.ylabel("Tour length")
 plt.title("Sequential Convergence")
 plt.tight_layout()
-plt.savefig("convergence500_seq.png")
+plt.savefig("convergence50_seq.png")
 plt.clf()
 
 print("Best order:", best_ever)
